@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaMarket Digital | Tienda Oficial</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --bg-light: #f8fafc;
+            --text-main: #334155;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+        }
+        .tagline {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .hero h2 {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #64748b;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .badge {
+            background: #dbeafe;
+            color: var(--accent);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .card h3 {
+            margin: 15px 0 10px 0;
+            font-size: 20px;
+            color: var(--primary);
+        }
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #059669;
+            margin-bottom: 15px;
+        }
+        .card p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .card-footer {
+            padding: 20px;
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        .btn {
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #94a3b8;
+            font-size: 14px;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 60px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>NovaMarket Digital</h1>
+            <span class="tagline">Selección inteligente de tecnología y hogar</span>
+        </div>
+        <div>
+            <span style="font-size: 14px; color: #cbd5e1;">Afiliado ID: <strong>NOV-2026-X9</strong></span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h2>Los mejores productos al alcance de un clic</h2>
+            <p>Explora nuestra selección curada. Compras seguras gestionadas por socios globales con garantía total.</p>
+        </div>
+
+        <div class="grid">
+            <!-- Producto 1 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="badge">Tecnología</span>
+                    <h3>Smartwatch Deportivo Pro</h3>
+                    <div class="price">$49.99 USD</div>
+                    <p>Monitoreo de salud 24/7, resistencia al agua IP68 y batería de larga duración de hasta 7 días.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" onclick="redirectToAffiliate('Smartwatch Pro')" class="btn">Ver Producto y Comprar</a>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="badge">Smart Home</span>
+                    <h3>Kit de Focos LED Inteligentes Wi-Fi</h3>
+                    <div class="price">$29.99 USD</div>
+                    <p>Compatible con asistentes de voz, 16 millones de colores y control de iluminación desde el celular.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" onclick="redirectToAffiliate('Focos LED Smart')" class="btn">Ver Producto y Comprar</a>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="card">
+                <div class="card-body">
+                    <span class="badge">Home Office</span>
+                    <h3>Lámpara LED de Escritorio con Carga Qi</h3>
+                    <div class="price">$35.50 USD</div>
+                    <p>Base con cargador inalámbrico rápido para smartphones, control táctil de brillo y luz ajustable.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" onclick="redirectToAffiliate('Lampara Escritorio')" class="btn">Ver Producto y Comprar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 NovaMarket Digital. Todos los derechos reservados. Operando bajo modelos de afiliación comercial.</p>
+    </footer>
+
+    <script>
+        function redirectToAffiliate(productName) {
+            // Aquí puedes reemplazar con tus enlaces de afiliado reales (ej: Amazon Associates, ClickBank, etc.)
+            alert("Redirigiendo al sistema logístico del proveedor para: " + productName + "\nTu enlace de comisión quedó registrado con éxito.");
+        }
+    </script>
+
+</body>
+</html>
